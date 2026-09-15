@@ -65,7 +65,7 @@ export default class Keybindings extends Module{
 
 	getKeyCode(e){
 		// Convert modern e.key to legacy numeric key code for compatibility
-		if(e.key.length === 1){
+		if(e.key && e.key.length === 1){
 			return e.key.toUpperCase().charCodeAt(0);
 		}
 		
